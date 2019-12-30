@@ -1,0 +1,19 @@
+
+.mui-navigate-right.mui-navigate-history{
+	text-align: center;	
+	background-color: #fff;
+	font-size: 25px;
+	color: #007aff;	
+}
+.mui-navigate-history:after{
+	right: auto;
+}
+
+.mui-table-view-cell.mui-active{
+	background-color: #FFFFFF;
+}
+.mui-table-view-cell.mui-collapse .mui-collapse-content{
+	margin:1px -15px;
+	padding:0px 15px;
+	background:#fff;
+	}

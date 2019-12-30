@@ -1,0 +1,141 @@
+.mui-table-view{
+	background-color: #efeff4;
+}
+.mui-table-view-cell{
+	z-index: 2;
+	margin-bottom: 6px;
+	background: #FFFFFF;
+}
+.mui-ellipsis{
+	height: 28px;
+	margin-top: 4px;
+}
+.mui-ellipsis-span{
+	display: inline-block;
+	width: 64px;
+}
+.themoney{
+	 font-weight: 900;
+	 float: right;
+	 color: #C4282B;
+	 margin-right: 20px;
+	 font-size: 15px;
+}
+b{
+	display: inline-block;
+	font-weight: 500;
+	color: #20232A;
+	margin-left: 20px;
+	font-size: 14px;
+}
+p{
+	font-family: "microsoft yahei";
+}
+.bxnr-span{
+	width: 64px; 
+	font-size: 14px; 
+	font-family: '微软雅黑'; 
+	color: #6D6D72; 
+	height: 28px;
+}
+.bxnr-div{
+	font-weight: 500;
+	color: #20232A;
+	position: relative;
+	left: 84px;
+	top: -20px;
+	width: 70%;		
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2; 		
+}
+#yijian{
+	color: #20232A;
+	width: 75%;
+	line-height: 20px;
+    padding: 5px;
+    border: none;
+}
+
+.mui-tab-label{
+	font-size: 14px;
+}
+.mui-bar-tab .mui-tab-item{
+	color: #20232A;
+}
+
+.mui-bar-tab .mui-tab-item.mui-active{
+	background-color: #efeff4;
+}
+
+.mui-icon-span{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+.agree{
+	background: url(../img/tongyi.png) no-repeat;
+	background-size: 100%;	
+}
+.disagree{
+	background: url(../img/notongyi.png) no-repeat;
+	background-size: 100%;	
+}
+.reject{
+	background: url(../img/bohui.png) no-repeat;
+	background-size: 100%;	
+}
+.ghzx{
+	background: url(../img/zhuxi.png) no-repeat;
+	background-size: 100%;	
+}
+.yuanquan-p{
+	padding: 15px 0px;
+	height: auto;
+	line-height: 32px;
+}
+.yuanquan{
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: #519BFF;
+	border-radius: 20px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 32px;
+}
+.yuanquan-span b{
+	font-weight: bold;
+	/*margin-left: 8px;*/
+	font-size: 12px;
+	color: #20232ab3;
+	
+}
+.fright{
+	float: right;
+}
+.yuanquan-span{
+	font-weight: bold;
+	font-size: 14px;
+	color: #20232A;
+	margin: auto 8px;
+	width: 50px;
+	display: inline-block;
+}
+
+.mui-toast-container {
+			bottom: 35% !important;			
+}
+			
+.mui-toast-message {
+	background: rgba(9,9,9,0.5);	
+	color: #fff;
+	width: 160px;
+	height: 60px;		
+	padding: 15px 5px;
+}

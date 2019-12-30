@@ -1,0 +1,1394 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style_theContent.css" />
+		<link rel="stylesheet" href="css/style_ytheContent.css" />
+		<script src="js/mui.min.js"></script>
+
+		<!--<link href="jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css" rel="stylesheet" />-->
+		<script src="jquery/jquery-1.9.1.min.js"></script>
+		<script src="jquery/jquery-migrate-1.4.1.min.js"></script>
+		<!--<script src="jquery-jbox/2.3/jquery.jBox-2.3.min.js" type="text/javascript"></script>-->
+		<script type="text/javascript" src="plugins/amazeui/js/amazeui.min.js"></script>
+		<script src="js/base.js"></script>
+		<link href="select2/css/select2-bootstrap.css" rel="stylesheet" />
+		<link href="select2/css/select2.css" rel="stylesheet" />
+		<script src="select2/js/select2.js"></script>
+		<script src="select2/js/select2_locale_zh-CN.js"></script>
+		<link rel="shortcut icon" href="img/t(1).ico"  type="image/x-icon"  />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left">返回</a>
+			<h1 class="mui-title">待办详情</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view" id="ul">
+				<!--<li class="mui-table-view-cell" style="height: 180px;">
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">审批类型：</span><b>支行工会报销审批</b></p>
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">报销类别：</span><b>支行工会报销审批</b></p>
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">报销单号：</span><b>支行工会报销审批</b></p>
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">关联申请：</span><b>支行工会报销审批</b></p>
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">币种：</span><b>人民币</b></p>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="bxnr-span">报销内容：</span>
+					<div class="bxnr-div">
+						报销审批支行工会报销审批支行工会报销审批支行工会销审批支行工会报销审批支行工会报销审批支行工会
+					</div>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<p class="mui-ellipsis"><span class="mui-ellipsis-span">报销金额：</span><b class="themoney">222</b></p>
+					</a>
+					<p class="mui-ellipsis" style="margin-top: 30px;"><span class="mui-ellipsis-span">发票张数：</span><b>2</b></p>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="bxnr-span">备注内容：</span>
+					<div class="bxnr-div">
+						销审批支行工会报销审批支行工会报销审批支行工会销审批支行工会报销审批支行工会报销审批支行工会
+					</div>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<p class="mui-ellipsis"><span class="mui-ellipsis-span">下级审批：</span><span class="fright" style="margin-right: 20px;">请选择</span></p>
+					</a>
+
+				</li>
+				<li class="mui-table-view-cell">
+					<p class="mui-ellipsis"><span class="mui-ellipsis-span">意见：</span><input id="message"/></p>
+				</li>-->
+				<!--<li class="mui-table-view-cell mui-collapse"  id="history">-->
+				<!--<span >：</span>-->
+				<!--<a class='mui-navigate-right' href='#' style='font-size: 14px;'>审批记录</a>-->
+
+				<!--<p class="mui-ellipsis yuanquan-p">
+							<span class="yuanquan">部</span>
+							<span class="yuanquan-span">张宝庆<b>已同意1</b></span>
+							<span class="fright">10.31 22:20</span>							
+						</p>
+						<p class="mui-ellipsis yuanquan-p">
+							<span class="yuanquan">部</span>
+							<span class="yuanquan-span">张宝庆<b>已同意2</b></span>
+							<span class="fright">10.31 22:20</span>							
+						</p>
+						<p class="mui-ellipsis yuanquan-p">
+							<span class="yuanquan">部</span>
+							<span class="yuanquan-span">张宝庆<b>已同意3</b></span>
+							<span class="fright">10.31 22:20</span>							
+						</p>
+						<p class="mui-ellipsis yuanquan-p">
+							<span class="yuanquan">部</span>
+							<span class="yuanquan-span">张宝庆<b>已同意4</b></span>
+							<span class="fright">10.31 22:20</span>							
+						</p>
+						-->
+
+				<!--</li>-->
+
+			</ul>
+			<p style="height: 60px;"></p>
+		</div>
+		<nav class="mui-bar mui-bar-tab" id="exam" style="height: auto;">
+			<!--<a class="mui-tab-item">
+				<span class="mui-icon-span agree"></span>
+				<span class="mui-tab-label">同意</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon-span reject"></span>
+				<span class="mui-tab-label">驳回</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon-span disagree"></span>
+				<span class="mui-tab-label">不同意</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon-span disagree"></span>
+				<span class="mui-tab-label">不同意</span>
+			</a>-->
+
+		</nav>
+
+	</body>
+
+</html>
+<script>
+	
+
+	var id = sessionStorage.getItem('id');
+	var data = sessionStorage.getItem('Data');
+	var token = sessionStorage.getItem('Token');
+
+	function goBack2() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskName = Request['taskName'];
+		if(taskName == "退回补充材料" || taskName == "驳回") {
+//			alert("你的事件已被驳回，请到客户端进行处理!");
+			mui.alert("你的申请已被驳回，请到客户端处理!");			
+			setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);			
+		}
+		var taskId = Request['taskId'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actfrom;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId + "&status=" +
+				status + "",
+			dataType: "json",
+			success: function(success) {
+				console.log("11111" + JSON.stringify(success));
+
+				//获取标识
+				var biaoshi = success.body.biaoshi;
+				//如果list为空，则没有数据，显示为空
+				if(JSON.stringify(success.body.findlist) == "[]") {
+					$("#ul").append(
+						"<img src='img/newnull.png' style='margin-top:40%;margin-left:24%;height:55%;width:55%;' class='am-img-responsive' />");
+					return;
+				}
+
+				// 事前审批
+				if(biaoshi == 2) {
+					$.each(success.body.findlist, function(i, item) {
+						var id = item.id;
+						var applicant = item.applicant;
+						if(item.spType=="1"){
+							var reitype="分行工会事前审批"
+						}else if(item.spType=="0"){
+							var reitype="分行项目事前审批"
+						}
+						var oddNumber = item.oddNumber;
+						var telephone = item.telephone;
+						var signatureMatter = item.signatureMatter;
+						var currency = item.currency;
+						var applicationMoney = item.applicationMoney;
+						var applicationDetail = item.applicationDetail;
+						//   备注内容
+						var remarks = item.remarks;
+						
+						if("last" != taskDefKey) {
+							
+							//判断审批人
+						if(localStorage.getItem("chooseman")) {
+							console.log("===", localStorage.getItem("chooseman").split("NO：")[1])
+							for(var i = 0; i < success.body.nextapproverlist.length; i++) {
+								if(localStorage.getItem("chooseman").split("NO：")[1] == success.body.nextapproverlist[i].loginName)
+									var choose = success.body.nextapproverlist[i].name
+							}
+						} else {
+							var choose = "请选择"
+						};
+							
+							$("#ul").append(
+								"<li class='mui-table-view-cell' style='height: 180px;'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请人:</span><b>" +
+								applicant +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请类型:</span><b>" +
+								reitype +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请单号:</span><b>" +
+								oddNumber +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请人电话:</span><b>" +
+								telephone +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销事项:</span><b>" +
+								signatureMatter +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>币种:</span><b>" +
+								currency +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>报销内容：</span><div class='bxnr-div'>" +
+								applicationDetail +
+								"</div></li> <li class='mui-table-view-cell'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销金额：</span><b class='themoney'>" +
+								applicationMoney +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>备注内容：</span><div class='bxnr-div'>" +
+								remarks +
+								"</div></li><li class='mui-table-view-cell'><a class='mui-navigate-right' href='chooseMan.html?taskId=" +
+								taskId +
+								"&taskName=" +
+								encodeURI(taskName) +
+								"&taskDefKey=" +
+								taskDefKey +
+								"&procInsId=" +
+								procInsId +
+								"&procDefId=" +
+								procDefId +
+								"&status=" +
+								status +
+								"&id=" +
+								id +
+								"'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>选择审批人：</span><span style='float: right;margin-right: 20px;' id='thechoose'>" +
+								choose +
+								"</span></p></a></li><li class='mui-table-view-cell'><p class='mui-ellipsis' style='height: 50px; line-height: 50px;'><span class='mui-ellipsis-span'>意见：</span><input id='yijian'/></p></li>" +
+								"<li class='mui-table-view-cell mui-collapse' id='history'><span class='mui-ellipsis' style='font-size: 14px;'>审批记录：</span></li><input type='hidden' id='testId' value='" +
+								id +
+								"' />"
+							)
+							//							var nextapprover;
+							//							$("#nextapprovers").select2();
+							//							$.each(success.body.nextapproverlist, function(i, item) {
+							//								var loginName = item.loginName;
+							//								//如果审批人包含last 审批人则为空
+							//								if(loginName == "last") {
+							//									nextapprover = "";
+							//								} else {
+							//									var name = item.name;
+							//									nextapprover = loginName + "/" + name;
+							//								}
+							//								$("#nextapprovers").append(
+							//									"<option  value='" + nextapprover + "'>" + nextapprover + "</option>"
+							//								)
+							//							})
+						} else {
+							$("#ul").append(
+								"<li class='mui-table-view-cell' style='height: 180px;'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请人:</span><b>" +
+								applicant +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请单号:</span><b>" +
+								oddNumber +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>申请人电话:</span><b>" +
+								telephone +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销事项:</span><b>" +
+								signatureMatter +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>币种:</span><b>" +
+								currency +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>报销内容：</span><div class='bxnr-div'>" +
+								applicationDetail +
+								"</div></li> <li class='mui-table-view-cell'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销金额：</span><b class='themoney'>" +
+								applicationMoney +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>备注内容：</span><div class='bxnr-div'>" +
+								remarks +
+								"</div></li><li class='mui-table-view-cell'><p class='mui-ellipsis' style='height: 50px; line-height: 50px;'><span class='mui-ellipsis-span'>意见：</span><input id='yijian'/></p></li>" +
+								"<li class='mui-table-view-cell mui-collapse' id='history'><span class='mui-ellipsis' style='font-size: 14px;'>审批记录：</span></li><input type='hidden' id='testId' value='" +
+								id +
+								"' />"
+							)
+						}
+
+					})
+
+					//历史记录
+					$.each(success.body.histoicFlowList, function(i, item) {
+						//审批人  
+						if(item.AssigneeName){
+							var AssigneeName = item.AssigneeName.substring(0, 4);
+							// 姓
+							var firstName = item.AssigneeName[0];
+						}else{
+							var AssigneeName ="完";
+						}
+						//审批结果
+						if(item.ActivityName == "开始") {
+							var Commentrisk = "提交申请";
+						} else {
+							var Commentrisk = item.Commentrisk;
+						}
+						//结束时间
+						if(item.EndTime) {
+							var theEndTime = item.EndTime;
+							var EndTime = theEndTime.slice(5, theEndTime.lastIndexOf(':'));
+							console.log('====', EndTime);
+						} else {
+							var EndTime = "正在审批中";
+						};
+
+						$("#history").append(
+							"<p class='mui-ellipsis yuanquan-p'><span class='yuanquan'>" +
+							firstName +
+							"</span><span class='yuanquan-span'>" +
+							AssigneeName +
+							"<b>" +
+							Commentrisk +
+							"</b></span><span class='fright' style='font-size: 10px;'>" +
+							EndTime +
+							"</span></p>");
+					})
+					//判断记录数据大于3隐藏
+					var thenum = $("#history").children("p").length;
+					if(thenum > 3) {
+						var obj = $("#history").find("p").eq(2);
+						obj.nextAll().wrap("<div class='mui-collapse-content'></div>");
+						$("#history").append("<a class='mui-navigate-right mui-navigate-history' style='padding: 39px;'></a>");
+					}
+
+					//判断taskDefKey是否包含last2,如果包含，显示提交工会主席  !=-1不包含
+//					if(taskDefKey.indexOf("last_2") != -1) {
+//						//显示工会主席                                  
+//						$("#exam").append(
+//							"<a class='mui-tab-item' onclick='hasghactTwo()' ><span class='mui-icon-span agree'></span><span class='mui-tab-label'>同意</span></a><a class='mui-tab-item' onclick='hasreject()'><span class='mui-icon-span reject'></span><span class='mui-tab-label'>驳回</span></a><a class='mui-tab-item' onclick='hasdisAgree()'><span class='mui-icon-span disagree'></span><span class='mui-tab-label'>不同意</span></a><a class='mui-tab-item' onclick='ghzx()'><span class='mui-icon-span disagree'></span><span class='mui-tab-label'>工会主席</span></a>"
+//
+//							//							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasghactTwo()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='hasreject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasdisAgree()' style='color:black;'>不同意</span></a></li><li><a  onClick='ghzx()'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>工会主席</span></a></li></ul></div></div>"
+//						);
+//					} else {
+						$("#exam").append(
+							"<a class='mui-tab-item' onclick='hasNoghactTwo()' ><span class='mui-icon-span agree'></span><span class='mui-tab-label'>同意</span></a><a class='mui-tab-item' onclick='reject()'><span class='mui-icon-span reject'></span><span class='mui-tab-label'>驳回</span></a><a class='mui-tab-item' onclick='disAgree()'><span class='mui-icon-span disagree'></span><span class='mui-tab-label'>不同意</span></a>"
+							//							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasNoghactTwo()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='reject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='disAgree()' style='color:black;'>不同意</span></a></li><li><a  href='main.html'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>返回</span></a></li></ul></div></div>"
+						);
+//					}
+
+				} else if(biaoshi == 1) {
+					//					$.each(success.body.bxDetails, function(i, item) {
+					//
+					//						$("#bxList").append(
+					//							"<div class='withdrawals-panel' style='color:black;'><span style='width:30%'>报销人姓名:" +
+					//							item.bxName +
+					//							"</span><span style='position: absolute;margin-left:20%;'>户名:" +
+					//							item.bankAccountName +
+					//							"</span></br><span >开户行:" +
+					//							item.bankName +
+					//							"</span><span style=' position: absolute;margin-left:20%;'>账号:" +
+					//							item.bankAccountNumber +
+					//							"</span></br><span>报销金额:" +
+					//							item.reiMoney +
+					//							"</span></br></div>"
+					//						)
+					//					})
+
+					//报销
+					$.each(success.body.findlist, function(i, item) {
+
+						var id = item.id;
+						//	   报销单号
+						var reiNumber = item.reiNumber;
+						//	  币种
+						var currency = item.currency;
+						//	   报销金额
+						var reiMoney = item.reiMoney;
+						//	   明细
+						var invoiceNumber = item.invoiceNumber;
+						var bankName = item.bankName;
+						var bankAccountNumber = item.bankAccountNumber;
+						var bankAccountName = item.bankAccountName;
+						var str = item.hold2;
+						var subStr = str.substring(0, 20);
+						//如果长度大于5就添加省略号否则就添加空、
+						//   关联事前
+						var hold2 = subStr + (str.length > 20 ? '...' : '');
+						// 	  报销类别
+						var reiType = item.reiType;
+						//	  审批类型
+						var reiApprovalType = item.reiApprovalType;
+						//	   报销内容
+						var reiDetail = item.reiDetail;
+						//   备注内容
+						var remarks = item.remarks;
+						//	判断选择的审批人
+
+						
+						if("last" != taskDefKey) {
+							
+							if(localStorage.getItem("chooseman")) {
+							console.log("===", localStorage.getItem("chooseman").split("NO：")[1])
+							for(var i = 0; i < success.body.nextapproverlist.length; i++) {
+								if(localStorage.getItem("chooseman").split("NO：")[1] == success.body.nextapproverlist[i].loginName)
+									var choose = success.body.nextapproverlist[i].name
+							}
+						} else {
+							var choose = "请选择"
+						}
+
+							
+							$("#ul").append(
+								"<li class='mui-table-view-cell' style='height: 180px;'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>审批类型:</span><b>" +
+								reiApprovalType +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销类别:</span><b>" +
+								reiType +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销单号:</span><b>" +
+								reiNumber +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>关联单号:</span><b>" +
+								hold2 +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>币种:</span><b>" +
+								currency +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>报销内容：</span><div class='bxnr-div'>" +
+								reiDetail +
+								"</div></li> <li class='mui-table-view-cell'><a class='mui-navigate-right' href='theDitail.html?taskId=" +
+								taskId +
+								"&taskName=" +
+								encodeURI(taskName) +
+								"&taskDefKey=" +
+								taskDefKey +
+								"&procInsId=" +
+								procInsId +
+								"&procDefId=" +
+								procDefId +
+								"&status=" +
+								status +
+								"&id=" +
+								id +
+								"'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销金额：</span><b class='themoney'>" +
+								reiMoney +
+								"</b></p></a><p class='mui-ellipsis' style='margin-top: 30px; float: left;'><span class='mui-ellipsis-span' style='color: #8f8f94;'>发票张数：</span><b>" +
+								invoiceNumber +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>备注内容：</span><div class='bxnr-div'>" +
+								remarks +
+								"</div></li><li class='mui-table-view-cell' id='showhiden'><a class='mui-navigate-right' href='chooseMan.html?taskId=" +
+								taskId +
+								"&taskName=" +
+								encodeURI(taskName) +
+								"&taskDefKey=" +
+								taskDefKey +
+								"&procInsId=" +
+								procInsId +
+								"&procDefId=" +
+								procDefId +
+								"&status=" +
+								status +
+								"&id=" +
+								id +
+								"'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>选择审批人：</span><span style='float: right;margin-right: 20px;' id='thechoose'>" +
+								choose +
+								"</span></p></a></li><li class='mui-table-view-cell'><p class='mui-ellipsis' style='height: 50px; line-height: 50px;'><span class='mui-ellipsis-span'>意见：</span><input id='yijian'/></p></li>" +
+								"<li class='mui-table-view-cell mui-collapse' id='history'><span class='mui-ellipsis' style='font-size: 14px;'>审批记录：</span></li><input type='hidden' id='testId' value='" +
+								id +
+								"' />"
+							)
+
+						} else {
+							$("#ul").append(
+								"<li class='mui-table-view-cell' style='height: 180px;'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>审批类型:</span><b>" +
+								reiApprovalType +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销类别:</span><b>" +
+								reiType +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销单号:</span><b>" +
+								reiNumber +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>关联单号:</span><b>" +
+								hold2 +
+								"</b></p><p class='mui-ellipsis'><span class='mui-ellipsis-span'>币种:</span><b>" +
+								currency +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>报销内容：</span><div class='bxnr-div'>" +
+								reiDetail +
+								"</div></li> <li class='mui-table-view-cell'><a class='mui-navigate-right' href='theDitail.html?taskId=" +
+								taskId +
+								"&taskName=" +
+								encodeURI(taskName) +
+								"&taskDefKey=" +
+								taskDefKey +
+								"&procInsId=" +
+								procInsId +
+								"&procDefId=" +
+								procDefId +
+								"&status=" +
+								status +
+								"&id=" +
+								id +
+								"'><p class='mui-ellipsis'><span class='mui-ellipsis-span'>报销金额：</span><b class='themoney'>" +
+								reiMoney +
+								"</b></p></a><p class='mui-ellipsis' style='margin-top: 30px; float: left;'><span class='mui-ellipsis-span' style='color: #8f8f94;'>发票张数：</span><b>" +
+								invoiceNumber +
+								"</b></p></li><li class='mui-table-view-cell'><span class='bxnr-span'>备注内容：</span><div class='bxnr-div'>" +
+								remarks +
+								"</div></li><li class='mui-table-view-cell'><p class='mui-ellipsis' style='height: 50px; line-height: 50px;'><span class='mui-ellipsis-span'>意见：</span><input id='yijian'/></p></li>" +
+								"<li class='mui-table-view-cell mui-collapse' id='history'><span class='mui-ellipsis' style='font-size: 14px;'>审批记录：</span></li><input type='hidden' id='testId' value='" +
+								id +
+								"' />"
+							)
+						}						
+					})
+
+					//历史记录
+					$.each(success.body.histoicFlowList, function(i, item) {
+						//审批人  
+						if(item.AssigneeName){
+							var AssigneeName = item.AssigneeName.substring(0, 4);
+							// 姓
+							var firstName = item.AssigneeName[0];
+						}else{
+							var AssigneeName ="完";
+						}
+						
+						
+						//审批结果						
+						if(item.ActivityName == "开始") {
+							var Commentrisk = "提交申请";
+						} else {
+							var Commentrisk = item.Commentrisk;
+						}
+						//结束时间
+						if(item.EndTime) {
+							var theEndTime = item.EndTime;
+							var EndTime = theEndTime.slice(5, theEndTime.lastIndexOf(':'));
+							console.log('====', EndTime);
+						} else {
+							var EndTime = "正在审批中";
+						};
+
+						$("#history").append(
+							"<p class='mui-ellipsis yuanquan-p'><span class='yuanquan'>" +
+							firstName +
+							"</span><span class='yuanquan-span'>" +
+							AssigneeName +
+							"<b>" +
+							Commentrisk +
+							"</b></span><span class='fright' style='font-size: 10px;'>" +
+							EndTime +
+							"</span></p>");
+					})
+					//判断审批记录是否大于3条,大于隐藏
+					var thenum = $("#history").children("p").length;
+					if(thenum > 3) {
+						var obj = $("#history").find("p").eq(2);
+						obj.nextAll().wrap("<div class='mui-collapse-content'></div>");
+						$("#history").append("<a class='mui-navigate-right mui-navigate-history' style='padding: 39px;'></a>");
+					}
+
+					//判断taskDefKey是否包含last2,如果包含，显示提交工会主席  !=-1不包含
+					if(taskDefKey.indexOf("last_2") != -1) {
+						//显示工会主席
+
+						$("#exam").append(
+							"<a class='mui-tab-item' onclick='hasghactTwo()' ><span class='mui-icon-span agree'></span><span class='mui-tab-label'>同意</span></a><a class='mui-tab-item' onclick='hasreject()'><span class='mui-icon-span reject'></span><span class='mui-tab-label'>驳回</span></a><a class='mui-tab-item' onclick='hasdisAgree()'><span class='mui-icon-span disagree'></span><span class='mui-tab-label'>不同意</span></a><a class='mui-tab-item' onclick='ghzx()'><span class='mui-icon-span ghzx'></span><span class='mui-tab-label'>主席</span></a>"
+
+							//							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasghactTwo()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='hasreject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasdisAgree()' style='color:black;'>不同意</span></a></li><li><a  onClick='ghzx()'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>工会主席</span></a></li></ul></div></div>"
+						);
+
+					} else {
+
+						$("#exam").append(
+							"<a class='mui-tab-item' onclick='hasNoghactTwo()' ><span class='mui-icon-span agree'></span><span class='mui-tab-label'>同意</span></a><a class='mui-tab-item' onclick='reject()'><span class='mui-icon-span reject'></span><span class='mui-tab-label'>驳回</span></a><a class='mui-tab-item' onclick='disAgree()'><span class='mui-icon-span disagree'></span><span class='mui-tab-label'>不同意</span></a>"
+
+							//							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasNoghactTwo()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='reject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='disAgree()' style='color:black;'>不同意</span></a></li><li><a  href='main.html'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>返回</span></a></li></ul></div></div>"
+						);
+
+					}
+				} else if(biaoshi == "运营") {
+					//运营							
+					$.each(success.body.findlist, function(i, item) {
+						var id = item.id;
+						var lwtype = item.lwtype;
+						var serial = item.serial;
+						var businessType = item.businessType;
+						var businessOptions = item.businessOptions;
+						var riskOptions = item.riskOptions;
+						var customerName = item.customerName;
+						var requirementDescription = item.requirementDescription;
+						$("#my-alert1").append("<div class='am-modal-dialog'><div class='am-modal-hd'></div><div class='am-modal-bd'>" +
+							requirementDescription +
+							"</div><div class='am-modal-footer'><span class='am-modal-btn'>确定</span></div></div>")
+						requirementDescription = requirementDescription.substr(0, 12) + '...';
+						var ventureAnalysis = item.ventureAnalysis;
+						$("#my-alert2").append("<div class='am-modal-dialog'><div class='am-modal-hd'></div><div class='am-modal-bd'>" +
+							ventureAnalysis +
+							"</div><div class='am-modal-footer'><span class='am-modal-btn'>确定</span></div></div>")
+						ventureAnalysis = ventureAnalysis.substr(0, 12) + '...';
+						var benefitEvaluation = item.benefitEvaluation;
+						$("#my-alert3").append("<div class='am-modal-dialog'><div class='am-modal-hd'></div><div class='am-modal-bd'>" +
+							benefitEvaluation +
+							"</div><div class='am-modal-footer'><span class='am-modal-btn'>确定</span></div></div>")
+						benefitEvaluation = benefitEvaluation.substr(0, 12) + '...';
+						var riskControl = item.riskControl;
+						$("#my-alert4").append("<div class='am-modal-dialog'><div class='am-modal-hd'></div><div class='am-modal-bd'>" +
+							riskControl +
+							"</div><div class='am-modal-footer'><span class='am-modal-btn'>确定</span></div></div>")
+						riskControl = riskControl.substr(0, 12) + '...';
+						var operator = item.operator;
+						var accessory = item.accessory;
+						$("#ul").append(
+							"<table class='am-table' style='margin-top:16%;'><tbody><tr><td>审批类型:<span style='margin-left:18%;'>" +
+							lwtype +
+							"</span></td></tr><tr><td><span >单号:<span><span style='margin-left:27%;'>" +
+							serial +
+							"</span></td></tr><tr><td>业务类型:<span style='margin-left:18%;'>" +
+							businessType +
+							"</span></td></tr><tr> <td><span >业务选项<span><span style='margin-left:18.5%;'>" +
+							businessOptions +
+							"</span></td></tr><tr><td>风险选项:<span style='margin-left:17.5%;'>" +
+							riskOptions +
+							"</span></td></tr><tr><td>客户名称:<span style='margin-left:18%;'>" +
+							customerName +
+							"</span></td></tr><tr><td>需求描述:<span style='margin-left:18%;'><a onclick='tagOne()'>" +
+							requirementDescription +
+							"</a></span></td></tr><tr><td>风险分析:<span  style='margin-left:18%;'><a onclick='tagTwo()'>" +
+							ventureAnalysis +
+							"</a></span></td></tr><tr><td>效益评估:<span  style='margin-left:18%;'><a onclick='tagThree()'>" +
+							benefitEvaluation +
+							"</a></span></td></tr><tr> <td>风控措施:<span  style='margin-left:18%;'<a onclick='tagFour()'>" +
+							riskControl +
+							"</a></span></td></tr><tr><td><span>发起人:<span><span style='margin-left:21.5%;'>" +
+							operator +
+							"</span></td></tr><tr><td>审批人:<span style='margin-left:21%;'><select id='nextapprovers' style='height:30%;width:60%;' data-am-selected='{btnWidth: '40%', btnSize: 'sm', btnStyle: 'secondary'}'><option value='请选择审批人' >请选择审批人</option></select></span></td></tr><tr><td>意见:<span style='margin-left:26%;'><input id='yijian' value='' style='width:60%;height:30%;'/></span></tr></td></tbody></table><input type='hidden' id='testId' value='" +
+							id +
+							"' />"
+						)
+
+					})
+
+					var nextapprover;
+					$("#nextapprovers").select2();
+					$.each(success.body.nextapproverlist, function(i, item) {
+						var loginName = item.loginName;
+						//如果审批人包含last 审批人则为空
+						if(loginName == "last_1" || loginName == "last_3") {
+							nextapprover = "";
+						} else {
+							var name = item.name;
+							nextapprover = loginName + "/" + name;
+						}
+						$("#nextapprovers").append(
+							"<option  value='" + nextapprover + "'>" + nextapprover + "</option>"
+						)
+					})
+
+					//判断taskDefKey是否包含last2,如果包含，显示行长  !=-1不包含
+					if(taskDefKey.indexOf("last_2") != -1) {
+						//显示行长审批
+
+						$("#noAgree").append(
+							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasghact()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='hasreject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='hasdisAgree()' style='color:black;'>不同意</span></a></li><li><a  onClick='hzsp()'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>行长审批</span></a></li></ul></div></div>"
+						);
+
+					} else {
+
+						$("#noAgree").append(
+							" <div  class='am-navbar' style='top:0px;'><div class='paoduct-title-panel'><ul class='am-navbar-nav  am-avg-sm-4 '><li><a><img src='image/agree.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='act()' style='color:black;'>同意</span></a></li><li><a><img src='image/history.png' class='am-img-responsive'/><span class='am-navbar-label' type='button' onclick='reject()' style='color:black;'>驳回</span></a></li><li><a><img src='image/save.png' class='am-img-responsive' /><span class='am-navbar-label' type='button' onclick='disAgree()' style='color:black;'>不同意</span></a></li><li><a  href='main.html'><img src='image/back.png' class='am-img-responsive' /><span class='am-navbar-label' style='color:black;'>返回</span></a></li></ul></div></div>"
+						);
+
+					}
+				}
+			},
+			error: function(success) {
+				console.log("22222");
+			}
+			
+			
+			
+//			if(taskDefKey=="last"){
+//				$("#showhiden").hide();
+//			}
+		})
+	}
+
+	function GetRequest() {
+		var url = decodeURI(location.search); //获取url中"?"符后的字串
+		var theRequest = new Object();
+		if(url.indexOf("?") != -1) {
+			var str = url.substr(1);
+			strs = str.split("&");
+			for(var i = 0; i < strs.length; i++) {
+				theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+			}
+		}
+		console.log('===', theRequest)
+		return theRequest;
+	}
+
+	//模糊查询
+	function testInput() {
+
+	}
+
+	//没有行长或者工会主席  运营   同意
+	function act() {
+		//		var shenpi = document.getElementById("nextapprovers").value;
+		//		var arr = shenpi.split("/");
+		if(localStorage.getItem("chooseman")) {
+			var nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		}
+
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "yes";
+		if(taskDefKey == "last_1" || taskDefKey == "last_3") {
+			nextapprover = "";
+		} else {
+			if(!localStorage.getItem("chooseman")) {
+				alert("请选择审批人!");
+				return;
+			}
+		}
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+			alert("当前没有数据可执行!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "同意";
+		}
+
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+				alert("同意请求成功!");				
+				localStorage.removeItem("chooseman");
+				window.location.href = 'main.html';
+			}
+		})
+
+	}
+	//没有行长或者工会主席              驳回
+	function reject() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "no";
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据！");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+//			alert("意见不能为空!");
+			mui.toast("意见不能为空！");
+			return;
+		}
+		//		var gg = document.getElementById("chooseman").value;
+		//		var arr = gg.split("/");
+		var nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("驳回申请成功!");
+				mui.toast("驳回操作成功！");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//没有行长或者工会主席      不同意
+	function disAgree() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "disagree";
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据！");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+//			alert("意见不能为空!");
+			mui.toast("意见不能为空！");
+			return;
+		}
+		//		var gg = document.getElementById("select").value;
+		//		var arr = gg.split("/");
+		//		var nextapprover = arr[0];
+		if(localStorage.getItem("chooseman")){
+			var nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		}
+		
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("不同意请求成功!");
+				mui.toast("不同意操作成功！");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//有工会主席同意
+	function hasghactTwo() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var nextapprover;
+		if("last_2" == taskDefKey) {
+			nextapprover = "";
+		} 
+//		else {
+//			//			var shenpi = document.getElementById("nextapprovers").value;
+//			var shenpi = localStorage.getItem("chooseman");
+//			if(!shenpi) {
+////				alert("请选择审批人!");
+//				mui.toast("请选择审批人!");
+//				return;
+//			}
+//			//			var arr = shenpi.split("/");
+//			//			nextapprover = arr[0];
+//			nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+//		}
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "yes";
+
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "同意";
+		}
+
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("同意请求成功!");
+				mui.toast("同意操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//没有工会主席同意
+	function hasNoghactTwo() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var nextapprover;
+		if("last" == taskDefKey) {
+			nextapprover = "";
+		} else {
+			//			var shenpi = document.getElementById("nextapprovers").value;
+			var shenpi = localStorage.getItem("chooseman");
+			if(!shenpi) {
+//				alert("请选择审批人!");
+				mui.toast("请选择审批人!");
+				return;
+			}
+			//			var arr = shenpi.split("/");
+			//			nextapprover = arr[0];
+			nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		}
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "yes";
+
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "同意";
+		}
+
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("同意请求成功!");
+				mui.toast("同意操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//有行长同意
+	function hasghact() {
+
+		var shenpi = localStorage.getItem("chooseman");
+		if(!shenpi) {
+//			alert("请选择审批人!");
+			mui.toast("请选择审批人!");
+			return;
+		}
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "yes";
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "同意";
+
+		}
+		var nextapprover;
+		if(taskDefKey == "last_2_1" || taskDefKey == "last_2_2") {
+			//			var arr = shenpi.split("/");
+			//			nextapprover = arr[0];
+			nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		} else {
+			nextapprover = "";
+		}
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("同意请求成功!");
+				mui.toast("同意操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//有行长或者主席驳回
+
+	function reject() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "no";
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+//			alert("意见不能为空!");
+			mui.toast("意见不能为空!");
+			return;
+		}
+
+		var nextapprover = "";
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("驳回申请成功!");
+				mui.toast("驳回操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//有行长或者工会主席      不同意
+	function hasdisAgree() {
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "disagree";
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+//			alert("意见不能为空!");
+			mui.toast("意见不能为空!");
+			return;
+		}
+		var nextapprover = "";
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("不同意请求成功!");
+				mui.toast("不同意操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//点击工会主席按钮
+	function ghzx() {
+		var shenpi = localStorage.getItem("chooseman");
+		if(!shenpi) {
+//			alert("请选择审批人!");
+			mui.toast("请选择审批人!");
+			return;
+		}
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "presidents";
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+//			alert("当前没有数据可执行!");
+			mui.toast("暂无数据!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "同意";
+		}
+		//		var arr = shenpi.split("/");
+		//		var nextapprover = arr[0];
+		nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+//				alert("同意请求成功!");
+				mui.toast("同意操作成功!");
+				localStorage.removeItem("chooseman");
+				setTimeout(function (){			 
+				window.location.href = 'main.html';
+			}, 2000);
+			}
+		})
+
+	}
+
+	//点击行长审批按钮
+	function hzsp() {
+
+		var Request = new Object();
+		Request = GetRequest();
+		var taskId = Request['taskId'];
+		var taskName = Request['taskName'];
+		var taskDefKey = Request['taskDefKey'];
+		var nextapprover;
+		if("last" == taskDefKey) {
+			nextapprover = "";
+		} else {
+			var shenpi = localStorage.getItem("chooseman");
+			if(!shenpi) {
+				alert("请选择审批人!");
+				return;
+			}
+		}
+		var procInsId = Request['procInsId'];
+		var procDefId = Request['procDefId'];
+		var status = Request['status'];
+		var flag = "presidents";
+		//判断是否有数据显示
+		var bid = document.getElementById("testId").value;
+		if(bid == '' || bid == "" || bid == null) {
+			alert("当前没有数据可执行!");
+			return;
+		}
+		var message = document.getElementById("yijian").value;
+		if(message == null || message == '' || message == "") {
+			message = "提交行长审批";
+		}
+		//		var arr = shenpi.split("/");
+		//		var nextapprover = arr[0];
+		nextapprover = localStorage.getItem("chooseman").split("NO：")[1];
+		$.ajax({
+			type: 'POST',
+			url: url + "/operationales/lwOperation/actaudit;JSESSIONID=" + id + "?__ajax=true&mobileLogin=true&taskId=" +
+				taskId +
+				"&taskName=" +
+				taskName +
+				"&taskDefKey=" +
+				taskDefKey +
+				"&procInsId=" +
+				procInsId +
+				"&procDefId=" +
+				procDefId +
+				"&flag=" +
+				flag +
+				"&comment=" +
+				message +
+				"&nextapprover=" +
+				nextapprover +
+				"&id=" +
+				bid,
+			dataType: "json",
+			success: function(data) {
+				alert("同意请求成功!");
+				localStorage.removeItem("chooseman");
+				window.location.href = 'main.html';
+			}
+		})
+
+	}
+	//历史提交
+	function delete_tag() {
+		$('#my-popup').modal({
+			relatedTarget: this,
+		});
+	}
+
+	//历史提交
+	function delete_tagTwo() {
+		$('#my-popupTwo').modal({
+			relatedTarget: this,
+		});
+	}
+
+	function tagOne() {
+		$('#my-alert1').modal({
+			relatedTarget: this,
+		});
+
+	}
+
+	function tagTwo() {
+		$('#my-alert2').modal({
+			relatedTarget: this,
+		});
+
+	}
+
+	function tagThree() {
+		$('#my-alert3').modal({
+			relatedTarget: this,
+		});
+
+	}
+
+	function tagFour() {
+		$('#my-alert4').modal({
+			relatedTarget: this,
+		});
+
+	}
+	//进入页面加载
+	window.addEventListener(onload, goBack2())
+	//页面准备好加载（展开/收起）
+	$(document).ready(function() {
+
+	})
+</script>

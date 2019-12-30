@@ -1,0 +1,39 @@
+.mui-pull-left{
+	color: #FFFFFF;
+	line-height: 26px;
+}
+.mui-table-view-cell{
+	z-index: 2;
+	position: relative;
+	top: 21px;
+	height: 110px;
+	margin-bottom: 12px;
+	background: #FFFFFF;
+}
+.mui-table-view-cell-a{
+	display: block;
+	height: 110px;
+}
+.mui-media-object{
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+.mui-media-body{
+	position: relative;
+	left: 32px;
+	top: 10px;
+}
+b{
+	display: block;
+	font-weight: 400;
+	margin-bottom: 5px;
+
+}
+.mui-content-div{
+	position: relative;
+	top: 35px;
+}
+.mui-icon.mui-icon-checkmarkempty,.mui-icon.mui-icon-person{
+	font-size: 26px;
+}

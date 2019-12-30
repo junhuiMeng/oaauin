@@ -1,0 +1,28 @@
+.mui-content {
+	margin-top: 150px;
+	padding: 20px;
+}
+
+.am-form-group {
+	height: 44px;
+	border-bottom: 1px solid #777;
+	background: #FFFFFF;
+	line-height: 44px;
+}
+
+#username,
+#password {
+	display: inline-block;
+	width: 80%;
+	outline: none;
+	border: none;
+}
+
+a {
+	padding: 10px;
+}
+
+.mui-icon-locked,
+.mui-icon-personadd {
+	color: #C4282B;
+}
